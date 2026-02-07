@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.top {
+  position: fixed;
+  inset: 0;
+  background: #000 url("cover.jpg") center / contain no-repeat;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.top-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: calc(14px + env(safe-area-inset-top));
+  padding-bottom: 14px;
+  padding-left: calc(16px + env(safe-area-inset-left));
+  padding-right: calc(16px + env(safe-area-inset-right));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+
+.top-header .title {
+  font-size: 0.8rem;
+  letter-spacing: 0.28em;
+  color: rgba(255,255,255,0.95);
+  white-space: nowrap;
+}
+
+.top-header .sub {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.65);
+  white-space: nowrap;
+}
+
+.day-nav {
+  position: absolute;
+  bottom: calc(env(safe-area-inset-bottom) + 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+}
+
+.day-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.28em;
+  font-weight: 300;
+  padding: 14px 38px;
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+  transition: background 0.2s ease;
+}
+
+.day-link:active {
+  background: rgba(255,255,255,0.15);
+}
